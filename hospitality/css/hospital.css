@@ -1,0 +1,54 @@
+/* ==== hospitals ==== */
+/* Dropdown Styling */
+.dropdown {
+	position: relative;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #fffffb;
+	min-width: 200px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	z-index: 9;
+}
+
+.dropdown-content a {
+	padding: 10px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #636365;
+	color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* ============ hospital ============= */
+
+.hospital-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-title{
+	font-weight: bolder;
+	font-size: x-large;
+	font-style: italic;
+}
+
+.hospital-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.filter-bar {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

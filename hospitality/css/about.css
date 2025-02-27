@@ -1,0 +1,208 @@
+/*== About US CSS ==*/
+
+/*= Section 1 =*/
+
+.mySlides {
+    display: none;
+    padding: 20px;
+    padding-bottom: 2px;
+  }
+  
+  .mySlides h2{
+    color: #333;
+    font-style: italic;
+    font-size: x-large;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(137, 134, 134, 0.5);
+    color: rgb(110, 108, 108);
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .slideshow-container:hover .prev,
+  .slideshow-container:hover .next {
+    opacity: 1; /* Show arrows on hover */
+  }
+  
+  
+  /* Slide Styling */
+  .col-md-6 ul,p,small{
+    color: #333;
+    font-style:italic;
+  }
+  
+  
+  .col-md-6 img {
+    width: 100%; /* Ensures responsiveness */
+    max-width: 500px; /* Prevents excessive scaling */
+    height: 300px; /* Maintains aspect ratio */
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: block; /* Ensures proper centering */
+    margin: 0 auto; /* Centers the image */
+  }
+  
+  /* Media Query for Small Screens */
+  @media screen and (max-width: 768px) {
+    /* .row {
+      flex-direction: column;
+      text-align: center;
+    } */
+  
+    .col-md-6 {
+      padding: 10px;
+    }
+  
+    .col-md-6 img {
+      max-width: 90%; /* Ensures it doesn't exceed container width */
+      margin: 0 auto;
+    }
+    
+    .prev, .next {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      line-height: 40px;
+    }
+  }
+  
+  /*Blockquote*/
+  blockquote {
+      padding: 5px 15px;
+      /* border-left-width: 2px; */
+    color: #333;
+    font-style: italic;
+    border-left: 4px solid #265885;
+  }
+  
+  blockquote p {
+      font-size: 14px;
+      font-weight: 400;
+    
+  }
+  blockquote:hover {
+      border-color: #134ad5;
+  }
+  
+  /*= About us Section 2 =*/
+  
+  .aboutSection {
+    background-color: #1e2e40;
+    width: 100vw; /* Ensures full width */
+    padding: 50px 0;
+    max-width: 100%; /* Prevents any extra width */
+    padding: 50px 0;
+    margin: 0 auto;
+  }
+  
+  .service-block-v6 {
+    display: flex;
+    justify-content: center; /* Centers columns */
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .service-block-v6 .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    min-height: 200px; /* Ensures equal height */
+  }
+  
+  .service-block-v6 .service-desc h2 {
+    color: #fefcfc;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-top: 10px;
+  }
+  
+  .service-block-v6 .service-desc p {
+    color: #fefcfc;
+    font-size: 14px;
+  }
+  
+  i.icon-custom{
+    color: #fcf9f9;
+    width: 40px;
+    height: 40px;
+    line-height: 50px;
+    display: inline-block;
+    border: solid 2px #e8e2e2;
+  }
+  
+  i .icon{
+    width: 20px;
+    margin-bottom: 16px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+  
+  }
+  
+  .rounded-x {
+    border-radius: 50% !important;
+  }
+  
+  i.icon-color-u {
+    color: #c7c7c7;
+    border: solid 2px #cccecf;
+  }
+  
+  /*= About Us Section3 =*/
+
+  .choose-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+.choose-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.choose-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.icon {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+/* .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+} */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

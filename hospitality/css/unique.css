@@ -1,0 +1,295 @@
+/* =================== background img =================== */
+/* Container for the entire section */
+.img-container {
+    position: relative;
+    width: 100%;
+    height: 470px; /* Default height on desktop */
+    overflow: hidden;
+  }
+  
+  /* Background Image Styling */
+  .bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fadeInBackground 2s ease-in-out;
+    opacity: .7;
+  }
+  
+  /* Overlay Container: centered in the parent container */
+  .overlay-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 700px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: fadeInOverlay 2s ease-in-out 0.5s forwards;
+  }
+  
+  /* Overlay Image fills the overlay container */
+  .overlay-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Overlay Caption: centered over the overlay image with a white board look */
+  .overlay-caption {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(90deg, #092866, #495e81);
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInCaption 2s ease-in-out 0.5s forwards;
+  }
+  
+  /* Keyframes for Background Image Animation */
+  @keyframes fadeInBackground {
+    0% {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Keyframes for Overlay Container (and its image) Animation */
+  @keyframes fadeInOverlay {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  /* Keyframes for Caption Animation */
+  @keyframes fadeInCaption {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  /* Responsive Adjustments */
+  
+  /* For screens up to 1024px */
+  @media (max-width: 1024px) {
+    .img-container {
+      height: 400px;
+    }
+    .overlay-container {
+      width: 500px;
+      height: 350px;
+    }
+    .overlay-caption {
+      font-size: 18px;
+      padding: 8px 16px;
+    }
+  }
+  
+  /* For screens up to 768px */
+  @media (max-width: 768px) {
+    .img-container {
+      height: 300px;
+    }
+    .overlay-container {
+      width: 350px;
+      height: 250px;
+    }
+    .overlay-caption {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
+  
+  /* For screens up to 480px */
+  @media (max-width: 480px) {
+    .img-container {
+      height: 250px;
+    }
+    .overlay-container {
+      width: 300px;
+      height: 220px;
+    }
+    .overlay-caption {
+      font-size: 15px;
+      padding: 4px 8px;
+    }
+  }
+
+  
+
+/* =================== Testimonial Section =================== */
+.testimonial {
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out;
+    padding: 100px 0; /* from .py-100 */
+    margin-top: 80px;
+  }
+  
+  /* Ensure the background section covers the full area */
+  .bg-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    z-index: 3;
+    overflow: hidden;
+  }
+  
+  /* Position the image to the right side */
+  .bg-section .bg-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: auto;       /* maintains aspect ratio */
+    object-fit: cover; /* ensures the image covers the area without distortion */
+    filter: brightness(0.7);
+    border-radius: 20px;
+  }
+  
+  /* Overlay on the background */
+  .overlay.overlay-2 {
+    position: absolute;
+    top: 0;
+    left: 365px;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 22, 71, 0.82); /* semi-transparent overlay */
+    z-index: 2;
+    animation: fadeInOverlay 1.5s ease-in-out;
+    border-radius: 20px;
+  }
+
+  .text-overlay {
+    position: absolute;
+    bottom: 200px; /* Distance from bottom */
+    left: 600px;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 1.5;
+    z-index: 9;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .img-container {
+      height: 300px;
+    }
+    .text-overlay {
+      font-size: 16px;
+      padding: 10px;
+      bottom: 15px;
+      left: 10px;
+      right: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .img-container {
+      height: 250px;
+    }
+    .text-overlay {
+      font-size: 14px;
+      padding: 8px;
+      bottom: 10px;
+      left: 5px;
+      right: 5px;
+    }
+  }
+  
+  /* ---------- Testimonial Image & Text Boxes ---------- */
+  .testimonial-img-box {
+    position: relative;
+    z-index: 5;
+    animation: slideIn 1.5s ease-in-out;
+  }
+
+  .testimonial-img-box .img-fluid{
+    border-radius: 10px;
+  }
+  
+  /* Add some spacing if needed */
+  .padding-0 {
+    padding: 0;
+  }
+  
+  /* ---------- Keyframes ---------- */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInOverlay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* ---------- Responsive Adjustments ---------- */
+  @media (max-width: 768px) {
+    .testimonial {
+      padding: 80px 0;
+    }
+    .testimonial-img-box{
+      animation: none; /* disable slide for small screens if desired */
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
