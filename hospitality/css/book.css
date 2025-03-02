@@ -1,3 +1,24 @@
+.parallax-1 {
+	background: url('/img/bg/APPOINT.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	top: 0;
+	padding-top: 0%;
+	opacity: .9;
+  }
+  
+  .parallax-inner {
+	padding: 10% 20%;
+	z-index: 9;
+	color: rgb(0, 0, 0);
+	font-weight: bolder;
+	font-style: italic;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+
+
 /* General Form Styles */
 .sky-form {
     background: #fff;

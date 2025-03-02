@@ -15,7 +15,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css\header.css">
     <link rel="stylesheet" href="css\about.css">
-    <link rel="stylesheet" href="css\hospital.css">
     <link rel="stylesheet" href="css\profile.css">
     <link rel="stylesheet" href="css\footer.css">
 </head>
@@ -38,16 +37,16 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li id="registerOption" class="nav-item"><a class="nav-link" href="register.html">Registration</a></li>
                     <button class="nav-button animated-btn" onclick="redirectToBooking()">Book Appointment</button>
-                    <li id="profileNav" class="nav-item" style="display: none;">
-                        <div id="profileContainer">
-                            <div id="profileLogo" class="profile-logo"></div>
-                            <span id="profileInitial" style="display: none;">U</span>
+                    <li id="profileNav" class="nav-item dropdown" style="display: none;">
+                        <div id="profileContainer" class="profile-logo-container">
+                            <img id="navProfilePic" class="profile-img" src="" alt="Profile" style="display: none;">
+                            <div id="navProfileInitial" class="profile-initial">U</div>
                             <span id="dropdownArrow">▼</span>
                         </div>
-                        <div id="profileDropdown" class="dropdown1">
-                            <a href="profile.html">Edit Profile</a>
-                            <a href="#">Help & Support</a>
-                            <a href="#" id="logout">Logout</a>
+                        <div id="profileDropdown" class="dropdown-menu">
+                            <a href="profile.html" class="dropdown-item">Edit Profile</a>
+                            <a href="#" class="dropdown-item">Help & Support</a>
+                            <a href="#" id="logout" class="dropdown-item">Logout</a>
                         </div>
                     </li>
                 </ul>
@@ -56,6 +55,11 @@
     </nav>
 
     <!--==== About Heading ====-->
+    <section class="parallax-1">
+        <div class="parallax-inner">
+            <center><h1>ABOUT US</h1></center>
+        </div>
+    </section>
     <!-- ===About Section 1 ===-->
     <!-- Slider with Content -->
     <div id="slide" style="position: relative; text-align: center; color: white;">

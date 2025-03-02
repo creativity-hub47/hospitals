@@ -15,3 +15,12 @@ $(document).ready(function(){
         ]
     });
 });
+
+
+let specialtyMatch = (selectedSpecialty === "Choose Specialty") || hospitalSpecialty.includes(selectedSpecialty.toLowerCase());
+if (locationMatch && ratingMatch && specialtyMatch) {
+    $(this).closest(".col-md-4").fadeIn();  // Show hospitals that match all filters
+} else {
+    $(this).closest(".col-md-4").fadeOut(); // Hide non-matching hospitals
+}
+

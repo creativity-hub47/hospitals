@@ -1,32 +1,23 @@
 /* ==== hospitals ==== */
-/* Dropdown Styling */
-.dropdown {
-	position: relative;
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #fffffb;
-	min-width: 200px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.parallax-1 {
+	background: url('/img/bg/hospital.webp') no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	top: 0;
+	padding-top: 0%;
+	opacity: .8;
+  }
+  
+  .parallax-inner {
+	padding: 10% 20%;
 	z-index: 9;
-}
-
-.dropdown-content a {
-	padding: 10px;
-	text-decoration: none;
-	display: block;
-}
-
-.dropdown-content a:hover {
-	background-color: #636365;
-	color: #fff;
-}
-
-.dropdown:hover .dropdown-content {
-	display: block;
-}
+	color: rgb(0, 0, 0);
+	font-weight: bolder;
+	font-style: italic;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
 
 /* ============ hospital ============= */
 

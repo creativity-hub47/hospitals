@@ -11,7 +11,6 @@
      <!-- Custom CSS -->
      <link rel="stylesheet" href="css\header.css">
      <link rel="stylesheet" href="css\doctor.css">
-     <link rel="stylesheet" href="css\hospital.css">
      <link rel="stylesheet" href="css\profile.css">
      <link rel="stylesheet" href="css\footer.css">
 </head>
@@ -51,6 +50,11 @@
         </div>
     </nav>
 
+    <section class="parallax-1">
+        <div class="parallax-inner">
+            <center><h1>DOCTORS & SPECIALITIES</h1></center>
+        </div>
+    </section>
 
     <div class="container mt-4">
         <h2 class="text-center mb-4">Find a Doctor</h2>
@@ -63,16 +67,23 @@
                 <div class="col-md-3">
                     <select class="form-select" id="specialtyFilter">
                         <option selected>Choose Specialty</option>
-                        <option value="cardiology">Cardiology</option>
-                        <option value="neurology">Neurology</option>
-                        <option value="orthopedics">Orthopedics</option>
+                        <option value="cardiology">Cardiologist</option>
+                        <option value="neurology">Neurologist</option>
+                        <option value="Plastic Surgery">Plastic Surgery</option>
+                        <option value="Plastic Surgery">Physician</option>
+                        <option value="Plastic Surgery">Neuro Surgeon</option>
+                        <option value="Plastic Surgery">Plastic & Reconstruction Surgeon</option>
+                        <option value="Plastic Surgery">Superspecialist Oncophysician</option>
+                        <option value="Plastic Surgery">Consultant Onco Surgeon</option>
+                        <option value="Plastic Surgery">Consultant - ENT Surgery</option>
                     </select>
                 </div>
                 <div class="col-md-3">
                     <select class="form-select" id="hospitalFilter">
                         <option selected>Choose Hospital</option>
-                        <option value="hospital1">City Hospital</option>
-                        <option value="hospital2">Sunrise Hospital</option>
+                        <option value="hospital1">Kiran Hospital</option>
+                        <option value="hospital2">Unique Hospital</option>
+                        <option value="hospital2">Sunshine Hospital</option>
                     </select>
                 </div>
                 <div class="col-md-2">
@@ -82,24 +93,101 @@
         </div>
         
         <div class="row" id="doctorList">
-            <div class="col-md-4">
+            <div class="col-md-4"><br>
                 <div class="card doctor-card">
-                    <img src="img\team\2.jpg" class="card-img-top" alt="Dr. John Doe">
+                    <img src="img/team/doc1.png" class="card-img-top" alt="" style="width: 355px; height: 355px;">
                     <div class="card-body">
-                        <h5 class="card-title">Dr. John Doe</h5>
+                        <h5 class="card-title">Dr. Alok Ranjan</h5>
                         <p class="card-text">Cardiologist at Kiran Hospital</p>
+                        <p><strong>Experience:</strong> 15+ years</p>
+                        <a href="doc-appoint.html" class="btn btn-outline-primary">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"><br>
+                <div class="card doctor-card">
+                    <img src="img/team/doc2.png" class="card-img-top" alt="" style="width: 355px; height: 355px;">
+                    <div class="card-body">
+                        <h5 class="card-title"> Dr. Kalpesh D. Gohel</h5>
+                        <p class="card-text">Neurologist at Kiran Hospital</p>
                         <p><strong>Experience:</strong> 10+ years</p>
                         <a href="doc-appoint.html" class="btn btn-outline-primary">Book Appointment</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4"><br>
                 <div class="card doctor-card">
-                    <img src="img\team\1.jpg" class="card-img-top" alt="Dr. Jane Smith">
+                    <img src="img/team/doc3.png" class="card-img-top" alt="" style="width: 355px; height: 355px;">
                     <div class="card-body">
-                        <h5 class="card-title">Dr. Jane Smith</h5>
-                        <p class="card-text">Neurologist at Sunshine Hospital</p>
+                        <h5 class="card-title"> Dr. Arvind G. Patel</h5>
+                        <p class="card-text">PLASTIC SURGERY at Kiran Hospital</p>
+                        <p><strong>Experience:</strong> 10+ years</p>
+                        <a href="doc-appoint.html" class="btn btn-outline-primary">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"><br><br>
+                <div class="card doctor-card">
+                    <img src="img/team/doc4.jpg" class="card-img-top" alt="" style="width: 355px; height: 355px;">
+                    <div class="card-body">
+                        <h5 class="card-title"> Dr. Rajesh Modi</h5>
+                        <p class="card-text">Physician at Unique Hospital</p>
                         <p><strong>Experience:</strong> 8+ years</p>
+                        <a href="doc-appoint.html" class="btn btn-outline-primary">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"><br><br>
+                <div class="card doctor-card">
+                    <img src="img/team/doc5.jpg" class="card-img-top" alt="" style="width: 355px; height: 355px;">
+                    <div class="card-body">
+                        <h5 class="card-title"> Dr. Kirit Shah</h5>
+                        <p class="card-text">Neuro Surgeon at Unique Hospital</p>
+                        <p><strong>Experience:</strong> 8+ years</p>
+                        <a href="doc-appoint.html" class="btn btn-outline-primary">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"><br><br>
+                <div class="card doctor-card">
+                    <img src="img/team/doc6.jpg" class="card-img-top" alt="" style="width: 355px; height: 355px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Vitrag Shah</h5>
+                        <p class="card-text">Plastic & Reconstruction Surgeon at Unique Hospital</p>
+                        <p><strong>Experience:</strong> 6+ years</p>
+                        <a href="doc-appoint.html" class="btn btn-outline-primary">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"><br>
+                <div class="card doctor-card">
+                    <img src="img/team/doc7.jpg" class="card-img-top" alt="" style="width: 355px; height: 355px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Honey Parekh</h5>
+                        <p class="card-text">Superspecialist Oncophysician at Sunshine Hospital</p>
+                        <p><strong>Experience:</strong> 6+ years</p>
+                        <a href="doc-appoint.html" class="btn btn-outline-primary">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"><br>
+                <div class="card doctor-card">
+                    <img src="img/team/doc8.jpg" class="card-img-top" alt="" style="width: 355px; height: 355px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Divyesh Pathak</h5>
+                        <p class="card-text">Consultant Onco Surgeon at Sunshine Hospital</p>
+                        <p><strong>Experience:</strong> 9+ years</p>
+                        <a href="doc-appoint.html" class="btn btn-outline-primary">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"><br>
+                <div class="card doctor-card">
+                    <img src="img/team/doc9.jpg" class="card-img-top" alt="" style="width: 355px; height: 355px;">
+                    <div class="card-body">
+                        <h5 class="card-title"> Dr. Farida Wadia</h5>
+                        <p class="card-text">Consultant - ENT Surgery at Sunshine Hospital</p>
+                        <p><strong>Experience:</strong> 4+ years</p>
                         <a href="doc-appoint.html" class="btn btn-outline-primary">Book Appointment</a>
                     </div>
                 </div>
@@ -114,128 +202,6 @@
             });
         });
     </script>
-
-    <!-- Image title -->
-	<div class="doctors-title" style="text-align: center; margin-top: 50px;">
-        <h2>DOCTORS</h2>
-    </div>
-    <!-- End title  -->
-    
-    <!--=== Team v1 ===-->
-    <div class="container content-md team-v1">
-        <ul class="list-unstyled row">
-            <li class="col-sm-3 col-xs-6 " style="margin-bottom: 30px;">
-                <div class="team-img">
-                    <img class="img-responsive" src="img\team\1.jpg" alt="">
-                    <ul>
-                        <li><a href="https://www.twitter.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-x-twitter"></i></a></li>
-                        <li><a href="https://www.facebook.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-                <h3>Dr. Harshil Patel</h3>
-		        <p><b>Designation</b></p>Consultant-Neurosurgery
-		        <p><b>NEURO SURGERY</b></p>
-            </li>
-            <li class="col-sm-3 col-xs-6 " style="margin-bottom: 30px;">
-                <div class="team-img">
-                    <img class="img-responsive" src="img/team/2.jpg" alt="">
-                    <ul>
-                        <li><a href="https://www.twitter.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-x-twitter"></i></a></li>
-                        <li><a href="https://www.facebook.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-                <h3>Dr. Sahil Achhava</h3>
-                <p><b>Designation</b></p>Consultant -Onco Surgeon
-                <p><b>SURGICAL ONCOLOGY</b></p>
-            </li>
-            <li class="col-sm-3 col-xs-6" style="margin-bottom: 30px;">
-                <div class="team-img">
-                    <img class="img-responsive" src="img/team/3.jpg" alt="">
-                    <ul>
-                        <li><a href="https://www.twitter.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-x-twitter"></i></a></li>
-                        <li><a href="https://www.facebook.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-                <h3>Dr. Dhruv Shah</h3>
-		        <p><b>Designation</b></p>MBBS,MD,MS
-		        <p><b>GENERAL SURGERY</b></p>
-            </li>
-            <li class="col-sm-3 col-xs-6" style="margin-bottom: 30px;">
-                <div class="team-img">
-                    <img class="img-responsive" src="img/team/4.jpg" alt="">
-                    <ul>
-                        <li><a href="https://www.twitter.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-x-twitter"></i></a></li>
-                        <li><a href="https://www.facebook.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-                <h3>Dr. Vijeta Kumari</h3>
-		        <p><b>Designation</b></p>MBBS
-		        <p><b>HEALTH CHECKUP</b></p>
-            </li>
-        </ul>
-    </div>
-    <!-- Second Line -->
-    <div class="container content-md team-v1" >
-        <ul class="list-unstyled row">
-            <li class="col-sm-3 col-xs-6 " style="margin-bottom: 30px;">
-                <div class="team-img">
-                    <img class="img-responsive" src="img/team/5.jpg" alt="">
-                    <ul>
-                        <li><a href="https://www.twitter.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-x-twitter"></i></a></li>
-                        <li><a href="https://www.facebook.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-                <h3>Dr. Yagnesh Patel</h3>
-		        <p><b>Designation</b></p>Consultant Dermatologist
-		        <p><b>DERMATOLOGY</b></p>
-            </li>
-            <li class="col-sm-3 col-xs-6 " style="margin-bottom: 30px;">
-                <div class="team-img">
-                <img class="img-responsive" src="img/team/6.jpg" alt="">
-                    <ul>
-                        <li><a href="https://www.twitter.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-x-twitter"></i></a></li>
-                        <li><a href="https://www.facebook.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-                <h3>Dr. Namita Bhoj</h3>
-		        <p><b>Designation</b></p>(M.D),(D.O)
-		        <p><b>EYE SPECIALIST</b></p>
-            </li>
-            <li class="col-sm-3 col-xs-6" style="margin-bottom: 30px;">
-                <div class="team-img">
-                    <img class="img-responsive" src="img/team/7.jpg" alt="">
-                    <ul>
-                        <li><a href="https://www.twitter.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-x-twitter"></i></a></li>
-                        <li><a href="https://www.facebook.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-                <h3>Dr. Jeel Patel</h3>
-                <p><b>Designation</b></p>MBBS,MBCHB
-                <p><b>CCU & ICU</b></p>
-            </li>
-            <li class="col-sm-3 col-xs-6 " style="margin-bottom: 30px;">
-                <div class="team-img">
-                    <img class="img-responsive" src="img/team/8.jpg" alt="">
-                    <ul>
-                        <li><a href="https://www.twitter.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-x-twitter"></i></a></li>
-                        <li><a href="https://www.facebook.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com"><i class="icon-custom icon-sm rounded-x fa-brands fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-                <h3>Dr. Harman</h3>
-		        <p><b>Designation</b></p>MBBS
-		        <p><b>HEALTH CHECKUP</b></p>
-            </li>
-        </ul>
-    </div>
-    <!--=== End Team v1 ===-->	
     <!--=== End About Me ===-->
     
 
