@@ -33,6 +33,8 @@
   position: relative;
   z-index: 1;
   animation: fadeIn 1.5s ease-in-out;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -147,13 +149,12 @@ h2.title-v2:after {
 
 /* Start Review */
 
-.main-review{
+.main-review {
   padding: 2.5rem 7%;
   width: 100%;
-  
 }
 
-.review-heading h2{
+.review-heading h2 {
   margin-bottom: 20px;
   text-align: center;
 }
@@ -165,46 +166,71 @@ h2.title-v2:after {
   border-radius: 5px;
 }
 
-.review-inner-content{
+.review-inner-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
   text-align: center;
-  padding: 4rem 0;
-  
+  padding: 2rem 0;
 }
 
-.review-box{
+.review-box {
   flex: 1 1 300px;
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 0 50px 0 0;
+  border-radius: 10px;
   border: 1px solid;
+  position: relative;
+}
+
+.review-box p {
+  padding: 1rem;
+  line-height: 1.5rem;
+}
+
+/* Small Delete Icon */
+.delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: gray;
   cursor: pointer;
-  transition: 1s;
-}
-.review-box:hover{
-
-  border-radius: 50px 0 0 0;
-  
+  transition: color 0.3s ease;
 }
 
-/* .review-box img{
-  border-radius: 100%;
-  width: 100px;
-  transition: 1s;
-}
-.review-box:hover img{
-  transform: scale(1.1);
-} */
-
-.review-box p{
-  padding: 1rem 1rem;
-  padding-bottom: 2rem;
-  line-height: 2.5rem;
+.delete-icon:hover {
+  color: red;
 }
 
+/* Review Form */
+.review-form {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.review-form input, .review-form select, .review-form textarea, .review-form button {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.review-form button {
+  background: #2166dd;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.review-form button:hover {
+  background: #184bb7;
+}
 /*== End Review ==*/
 
 

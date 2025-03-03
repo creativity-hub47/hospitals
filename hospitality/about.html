@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css\about.css">
     <link rel="stylesheet" href="css\profile.css">
     <link rel="stylesheet" href="css\footer.css">
+
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -60,124 +61,49 @@
             <center><h1>ABOUT US</h1></center>
         </div>
     </section>
+    
     <!-- ===About Section 1 ===-->
-    <!-- Slider with Content -->
-    <div id="slide" style="position: relative; text-align: center; color: white;">
-        <div class="slideshow-container">
-            <!-- Slide 1 -->
-            <div class="mySlides">
-                <h2>ABOUT<span style="color: #265885;"> KIRAN HOSPITAL</span></h2><br>
-                <div class="row">
-                    <div class="col-md-6" style="margin-bottom: 40px; padding: 20px;">
-                        <p><span style="color: #1343d5;">KIRAN HOSPITAL </span> - Multi Super Speciality Hospital & Research Center. SAMAST PATIDAR AAROGYA TRUST is a “NOT FOR PROFIT” Organization. The Trust has setup a State of the Art world class Multi Super specialty Hospital and Research Centre in the Centre of Surat City, Gujarat.</p>
-                        <ul class="list-unstyled">
-                            <li>✔ Multiple Options For Treatment.</li>
-                            <li>✔ Full Of Latest Technologies and Equipments.</li>
-                            <li>✔ 24/7 Ambulance Support.</li>
-                            <li>✔ Eminent and Experienced Doctors.</li>
-                        </ul>
-                        <blockquote>
-                            <p>As a leading health organization in our region, we want to be a strong influence for better health and prevention.</p>
-                            <small>- CEO Rajiv Shah</small>
-                        </blockquote>
-                    </div>
-                    <div class="col-md-6">
-                        <img style="border-radius: 50px; margin-left: 30px;" src="img\bg\kiran.jpg" width="500" height="350" alt="">
-                    </div>
+    <section class="about-section">
+        <h1>About Our Multi-Hospital Network</h1>
+        <p>Connecting you to the best healthcare facilities, doctors, and advanced medical services across multiple hospitals.</p>
+    </section>
+    <div class="container mt-4">
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5 class="card-title">Multiple Hospitals</h5>
+                    <p class="card-text">We collaborate with top-tier hospitals to offer a variety of specialized treatments and cutting-edge technology.</p>
                 </div>
             </div>
-
-            <!-- Slide 2 -->
-            <div class="mySlides">
-                <h2>ABOUT<span style="color: #265885;"> SUNSHINE GLOBAL HOSPITAL</span></h2><br>
-                <div class="row">
-                    <div class="col-md-6" style="margin-bottom: 40px; padding: 20px;">
-                        <p><span style="color: #2a39d6;">SUNSHINE GLOBAL HOSPITAL</span> - (A unit of M/s. Baroda Medicare Private Limited), located strategically in Vadodara and Surat, are NABH Accredited Multi-Specialty Hospitals offering super specialty services for over 14 and 9 years respectively.</p>
-                        <ul class="list-unstyled">
-                            <li>✔ Advanced heart surgeries.</li>
-                            <li>✔ 24/7 Emergency Cardiac Care.</li>
-                            <li>✔ Non-invasive heart treatments.</li>
-                        </ul>
-                        <blockquote>
-                            <p>As leading Tertiary Care Hospitals in Central and South Gujarat, we provide comprehensive 24*7 healthcare solutions. </p>
-                            <small>- CEO Ravindra V. Karanjekar</small>
-                        </blockquote>
-                    </div>
-                    <div class="col-md-6">
-                        <img style="border-radius: 50px; margin-left: 30px;" src="img\bg\sunshine.jpg" width="500" height="350" alt="">
-                    </div>
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5 class="card-title">Specialized Doctors</h5>
+                    <p class="card-text">Our network includes highly skilled doctors across various specialties, ensuring expert medical care.</p>
                 </div>
             </div>
-
-            <!-- Slide 3 -->
-            <div class="mySlides">
-                <h2>ABOUT<span style="color: #265885;"> UNIQUE HOSPITAL</span></h2><br>
-                <div class="row">
-                    <div class="col-md-6" style="margin-bottom: 40px; padding: 20px;">
-                        <p><span style="color: #214fe5;">UNIQUE HOSPITAL</span> - The best healthcare professionals provide Comprehensive healthcare. It is located at Adajan. It provides advanced levels of care in over different specialties including Plastic Surgery, Gynecology and Obstetrics, Pediatrics, Psychology, Physiotherapy, Radiology, Neurology, Urology.</p>
-                        <ul class="list-unstyled">
-                            <li>✔ High-Resolution MRI & CT Scans.</li>
-                            <li>✔ Fully Automated Pathology Lab.</li>
-                        </ul>
-                        <blockquote>
-                            <p> A leading healthcare institution dedicated to providing a wide range of medical services and treatments. </p>
-                            <small>- CEO Parshottam G. Koradia</small>
-                        </blockquote>
-                    </div>
-                    <div class="col-md-6">
-                        <img style="border-radius: 50px; margin-left: 30px;" src="img\bg\unique1.jpg" width="500" height="350" alt="">
-                    </div>
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5 class="card-title">Departments & Services</h5>
+                    <p class="card-text">From cardiology to orthopedics, our hospitals provide comprehensive healthcare services under one roof.</p>
                 </div>
             </div>
-
-            <!-- Navigation Buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+    </div>
 
-        <!-- Dots for Navigation -->
-        <div style="text-align:center; margin-top: 10px;">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-    </div><br>  
-    <!-- JavaScript -->
     <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
+        $(document).ready(function() {
+            $(".card").hover(
+                function() {
+                    $(this).css("transform", "scale(1.05)");
+                },
+                function() {
+                    $(this).css("transform", "scale(1)");
+                }
+            );
+        });
+    </script>
 
-        function plusSlides(n) {
-        showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-        showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
         
-        if (n > slides.length) { slideIndex = 1; }
-        if (n < 1) { slideIndex = slides.length; }
-        
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        }
-
-        // Auto Slide Change Every 5 Seconds
-        setInterval(() => { plusSlides(1); }, 5000);
-    </script>            
     <!-- ===End About Section 1 ===-->
 
     <!--=== About Section 2 ===-->
@@ -189,7 +115,7 @@
                 </i>
                 <div class="service-desc">
                     <h2>Vision</h2>
-                    <p>Ensuring ‘well-being’ as a humane commitment to enliven humanity.</p>
+                    <p>To create an integrated healthcare ecosystem that connects multiple hospitals, doctors, and specialties under one platform, ensuring accessible, high-quality, and affordable medical care for every patient, anytime and anywhere.</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -198,7 +124,7 @@
                 </i>
                 <div class="service-desc">
                     <h2>Mission</h2>
-                    <p>The ‘well-being’ ensured by extension of Available, Accessible, Affordable, Safe, Efficacious, Professional And Ethical.</p>
+                    <p>To provide seamless access to world-class healthcare facilities, ensuring patients receive timely and efficient treatment.</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -206,8 +132,8 @@
                     <img class="icon" src="img\medical\008.png">
                 </i>
                 <div class="service-desc">
-                    <h2>Core Values</h2>
-                    <p>Teamwork, Integrity, Responsibility, Compassion, And Ethics.</p>
+                    <h2>Values</h2>
+                    <p>We believe in transparency, quality care, and patient-centered services, prioritizing health and well-being above all.</p>
                 </div>
             </div>
         </div><!-- /row -->

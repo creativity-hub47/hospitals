@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css\header.css">
     <link rel="stylesheet" href="css\index.css">
@@ -53,7 +55,7 @@
     </nav>
     
 
-    <!-- Slider -->
+    <!-- auto change -->
     <div class="background-container">
         <div class="content">
             <div class="hero-overlay"></div>
@@ -74,7 +76,7 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<!-- End of Slider -->
+	<!-- End of auto change -->
 
     <!--=== Welcome to Unity===-->
     <section id="about" class="about section-padding">
@@ -108,7 +110,7 @@
                 <div class="card">
                     <img src="img\bg\bgimg1.jpg" class="card-img-top" alt="Hospital 1">
                     <div class="card-body">
-                        <h5 class="card-title">City Hospital</h5>
+                        <h5 class="card-title">Kiran Hospital</h5>
                         <p class="card-text">A top-rated hospital with advanced medical facilities.</p>
                         <a href="kiran.html" class="btn btn-primary">View Details</a>
                     </div>
@@ -118,7 +120,7 @@
                 <div class="card">
                     <img src="img\bg\sunshine1.jpg" class="card-img-top" alt="Hospital 2">
                     <div class="card-body">
-                        <h5 class="card-title">Global Health Hospital</h5>
+                        <h5 class="card-title">Sunshine Hospital</h5>
                         <p class="card-text">Specialized in emergency care and surgeries.</p>
                         <a href="sunshine.html" class="btn btn-primary">View Details</a>
                     </div>
@@ -128,7 +130,7 @@
                 <div class="card">
                     <img src="img\bg\Unique.jpg" class="card-img-top" alt="Hospital 3">
                     <div class="card-body">
-                        <h5 class="card-title">Elite Care Hospital</h5>
+                        <h5 class="card-title">Unique Hospital</h5>
                         <p class="card-text">Comprehensive care with state-of-the-art technology.</p>
                         <a href="unique.html" class="btn btn-primary">View Details</a>
                     </div>
@@ -172,53 +174,123 @@
     <!--=== End Testimonials ===-->
 
     <!-- customer review -->
-   <div class="main-review">
+    <div class="main-review">
         <section> 
             <div class="review-heading">
                 <h2>Our Customers Review</h2>
                 <div class="line"></div>
             </div>
-
+    
             <div class="main-inner-review">
-
-                <div class="review-inner-content">
-
+                <div class="review-inner-content" id="reviewContainer">
+                    <!-- Static reviews -->
                     <div class="review-box">
-                        <img src="images/pic1.png" alt="">
-
+                        <i class="fa-solid fa-trash delete-icon" onclick="this.parentElement.remove()"></i>
                         <h2>Lara John</h2>  
                         <p> ⭐⭐⭐⭐⭐</p>
                         <div class="review-text">
-                            <p>Optio quod assumenda similique provident aliquid corrupti minima maxime tempore! Quas illo porro fuga consectetur repellat </p>
+                            <p>Excellent service! The staff was very friendly and helpful.</p>
                         </div>
-
                     </div>
-
+    
                     <div class="review-box">
-                        <img src="images/pic2.png" alt="">
-
+                        <i class="fa-solid fa-trash delete-icon" onclick="this.parentElement.remove()"></i>
                         <h2>Michael Smith</h2>
                         <p> ⭐⭐⭐</p>
                         <div class="review-text">
-                            <p>Optio quod assumenda similique provident aliquid corrupti minima maxime tempore! Quas illo porro fuga consectetur repellat</p>
+                            <p>The experience was good, but the wait time was longer than expected.</p>
                         </div>
-
                     </div>
-
+    
                     <div class="review-box">
-                        <img src="images/pic3.png" alt="">
-
+                        <i class="fa-solid fa-trash delete-icon" onclick="this.parentElement.remove()"></i>
                         <h2>Sophia Lee</h2>
                         <p> ⭐⭐⭐⭐</p>
-
                         <div class="review-text">
-                            <p>Optio quod assumenda similique provident aliquid corrupti minima maxime tempore! Quas illo porro fuga consectetur repellat</p>
+                            <p>Great customer service and friendly atmosphere!</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+    
+        <!-- Review Form -->
+        <div class="review-form">
+            <h3>Leave a Review</h3>
+            <input type="text" id="name" placeholder="Your Name">
+            <select id="rating">
+                <option value="⭐⭐⭐⭐⭐">5 Stars</option>
+                <option value="⭐⭐⭐⭐">4 Stars</option>
+                <option value="⭐⭐⭐">3 Stars</option>
+                <option value="⭐⭐">2 Stars</option>
+                <option value="⭐">1 Star</option>
+            </select>
+            <textarea id="reviewText" placeholder="Your Review"></textarea>
+            <button onclick="addReview()">Submit Review</button>
+        </div>
     </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", loadReviews);
+    
+        function addReview() {
+            let name = document.getElementById("name").value.trim();
+            let rating = document.getElementById("rating").value;
+            let reviewText = document.getElementById("reviewText").value.trim();
+    
+            if (name === "" || reviewText === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+    
+            let review = {
+                id: Date.now(),
+                name,
+                rating,
+                text: reviewText
+            };
+    
+            let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+            reviews.push(review);
+            localStorage.setItem("reviews", JSON.stringify(reviews));
+    
+            displayReview(review);
+            document.getElementById("name").value = "";
+            document.getElementById("reviewText").value = "";
+        }
+    
+        function displayReview(review) {
+            let reviewContainer = document.getElementById("reviewContainer");
+    
+            let reviewBox = document.createElement("div");
+            reviewBox.classList.add("review-box");
+            reviewBox.setAttribute("data-id", review.id);
+    
+            reviewBox.innerHTML = `
+                <i class="fa-solid fa-trash delete-icon" onclick="deleteReview(${review.id})"></i>
+                <h2>${review.name}</h2>
+                <p>${review.rating}</p>
+                <div class="review-text">
+                    <p>${review.text}</p>
+                </div>
+            `;
+    
+            reviewContainer.appendChild(reviewBox);
+        }
+    
+        function deleteReview(reviewId) {
+            let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+            let updatedReviews = reviews.filter(review => review.id !== reviewId);
+            localStorage.setItem("reviews", JSON.stringify(updatedReviews));
+    
+            document.querySelector(`[data-id="${reviewId}"]`).remove();
+        }
+    
+        function loadReviews() {
+            let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+            reviews.forEach(review => displayReview(review));
+        }
+    </script>
     <!-- customer review -->
 
     

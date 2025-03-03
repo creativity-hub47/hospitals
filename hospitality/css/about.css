@@ -20,115 +20,30 @@
   
 /*= Section 1 =*/
 
-.mySlides {
-    display: none;
-    padding: 20px;
-    padding-bottom: 2px;
-  }
-  
-  .mySlides h2{
-    color: #333;
-    font-style: italic;
-    font-size: x-large;
-  }
-  
-  .row {
-    display: flex;
-    align-items: center;
-  }
-  
-  .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background-color: rgba(137, 134, 134, 0.5);
-    color: rgb(110, 108, 108);
-    font-size: 24px;
-    text-align: center;
-    line-height: 50px;
-    cursor: pointer;
-    border-radius: 50%;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-  
-  .slideshow-container:hover .prev,
-  .slideshow-container:hover .next {
-    opacity: 1; /* Show arrows on hover */
-  }
-  
-  
-  /* Slide Styling */
-  .col-md-6 ul,p,small{
-    color: #333;
-    font-style:italic;
-  }
-  
-  
-  .col-md-6 img {
-    width: 100%; /* Ensures responsiveness */
-    max-width: 500px; /* Prevents excessive scaling */
-    height: 300px; /* Maintains aspect ratio */
-    border-radius: 50px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    display: block; /* Ensures proper centering */
-    margin: 0 auto; /* Centers the image */
-  }
-  
-  /* Media Query for Small Screens */
-  @media screen and (max-width: 768px) {
-    /* .row {
-      flex-direction: column;
-      text-align: center;
-    } */
-  
-    .col-md-6 {
-      padding: 10px;
-    }
-  
-    .col-md-6 img {
-      max-width: 90%; /* Ensures it doesn't exceed container width */
-      margin: 0 auto;
-    }
-    
-    .prev, .next {
-      width: 40px;
-      height: 40px;
-      font-size: 18px;
-      line-height: 40px;
-    }
-  }
-  
-  /*Blockquote*/
-  blockquote {
-      padding: 5px 15px;
-      /* border-left-width: 2px; */
-    color: #333;
-    font-style: italic;
-    border-left: 4px solid #265885;
-  }
-  
-  blockquote p {
-      font-size: 14px;
-      font-weight: 400;
-    
-  }
-  blockquote:hover {
-      border-color: #134ad5;
-  }
-  
+.about-section {
+  background: linear-gradient(to right, #007bff, #6610f2);
+  color: white;
+  padding: 60px 0;
+  border-radius: 10px;
+  text-align: center;
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container{
+  padding-bottom: 40px;
+}
+
+
   /*= About us Section 2 =*/
-  
+
   .aboutSection {
     background-color: #1e2e40;
     width: 100vw; /* Ensures full width */

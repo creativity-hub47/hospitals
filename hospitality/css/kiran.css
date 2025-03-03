@@ -29,11 +29,82 @@
 
 
 
+/*= About kiran =*/
+.page {
+  padding: 20px;
+  padding-bottom: 2px;
+  background-color: #cbcaca;
+  margin-top: 50px;
+}
+
+.page h2{
+  color: #333;
+  font-style: italic;
+  font-size: x-large;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Slide Styling */
+.col-md-6 ul,p,small{
+  color: #333;
+  font-style:italic;
+}
+
+
+.col-md-6 img {
+  width: 100%; /* Ensures responsiveness */
+  max-width: 500px; /* Prevents excessive scaling */
+  height: 300px; /* Maintains aspect ratio */
+  border-radius: 50px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: block; /* Ensures proper centering */
+  margin: 0 auto; /* Centers the image */
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 768px) {
+  /* .row {
+    flex-direction: column;
+    text-align: center;
+  } */
+
+  .col-md-6 {
+    padding: 10px;
+  }
+
+  .col-md-6 img {
+    max-width: 90%; /* Ensures it doesn't exceed container width */
+    margin: 0 auto;
+  }
+
+}
+
+/*Blockquote*/
+blockquote {
+    padding: 5px 15px;
+    /* border-left-width: 2px; */
+  color: #333;
+  font-style: italic;
+  border-left: 4px solid #265885;
+}
+
+blockquote p {
+    font-size: 14px;
+    font-weight: 400;
+  
+}
+blockquote:hover {
+    border-color: #134ad5;
+}
 
 
 /* ==== departments ==== */
-
-/*= About Us Section3 =*/
   /* Section Title Styling */
   .section-title {
     font-size: 28px;
@@ -121,3 +192,131 @@
         text-align: center;
     }
   }
+
+
+  /* Start Pricing Section Css*/
+.pricingSection {
+  background-color: #f9f9f9;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 60px; 
+  margin-bottom: 50px; 
+}
+
+/* Font style for h2 */
+.headline-center h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Line below h2 */
+.headline-center .line {
+  width: 80px;
+  height: 4px;
+  background-color: #2166dd;
+  margin: 0 auto 50px auto;
+  border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+.headline-center h2 {
+    font-size: 24px; /* Slightly reduce size for tablets */
+}
+.headline-center .line {
+    width: 70px;
+}
+}
+
+@media (max-width: 768px) {
+.headline-center h2 {
+    font-size: 22px; /* Smaller font for mobile devices */
+}
+.headline-center .line {
+    width: 60px;
+}
+}
+
+@media (max-width: 480px) {
+.headline-center h2 {
+    font-size: 20px; /* Further reduce font for very small screens */
+}
+.headline-center .line {
+    width: 50px;
+}
+}
+
+/* Add spacing between columns */
+.pricingSection .box {
+  padding-top: 10px; /* Adds inner spacing for better layout */
+}
+
+/* Style for the "Show More" button */
+#showMore {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #2166dd;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+#showMore:hover {
+  border: 1px solid rgb(61, 180, 248);
+  box-shadow: 0px 0px 15px 5px rgba(40, 170, 200, 1);
+}
+
+/*---
+    Pricing
+---*/
+.pricing-v9 {
+    border: 1px solid #929aa5;
+}
+.pricing-v9:hover {
+    box-shadow: 0 0 15px #322d2d;
+}
+.pricing-v9-head {
+    border-bottom: 1px solid #e4e7ea;
+}
+.pricing-v9-head h3 {
+    margin: 0;
+}
+.pricing-v9 ul {
+    margin: 0;
+}
+.pricing-v9 li {
+    margin-bottom: 5px;
+}
+.pricing-v9-price,
+.pricing-v9-footer,
+.pricing-v9 ul,
+.pricing-v9-head {
+    padding: 20px 15px;
+}
+.pricing-v9-price,
+.pricing-v9-footer {
+    border-top: 1px solid #e0e2e4;
+}
+.pricing-v9-price {
+    font-weight: 500;
+}
+
+.h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+.hover-effect {
+transition: all 0.4s ease-in-out;
+}
+
+.g-color-default { color: #1350d5;}
+.color-green { color: #1391d5;}
+/* End Pricing Section Css*/
