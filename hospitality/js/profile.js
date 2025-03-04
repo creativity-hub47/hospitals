@@ -16,6 +16,7 @@ document.addEventListener("click", (event) => {
 });
 
 
+
 // ==== profile page ====
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -25,46 +26,51 @@ document.addEventListener("DOMContentLoaded", function () {
     const profileInitial = document.getElementById("profileInitial");
     const profileDropdown = document.getElementById("profileDropdown");
     const profileUsername = document.getElementById("profileUsername");
-    const profilePic = document.getElementById("profilePic");
-    const uploadPic = document.getElementById("uploadPic");
+    const avatarContainer = document.getElementById("avatarContainer");
+    const avatarInput = document.getElementById("avatarInput");
+    const userAvatar = document.getElementById("userAvatar");
+    const avatarPlaceholder = document.getElementById("avatarPlaceholder");
+    const removeAvatarBtn = document.getElementById("removeAvatarBtn");
     const logoutBtn = document.getElementById("logout");
 
     // Check if user is logged in
-    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
     if (!loggedInUser) {
         window.location.href = "index.html"; // Redirect to homepage if not logged in
     } else {
-        // Display user details
         profileUsername.textContent = loggedInUser.username;
 
-        if (loggedInUser.profilePic) {
-            profilePic.style.backgroundImage = `url(${loggedInUser.profilePic})`;
-            profileLogo.style.backgroundImage = `url(${loggedInUser.profilePic})`;
-            profileInitial.style.display = "none"; // Hide initial if profile picture exists
+        if (loggedInUser.avatarContainer) {
+            updateProfileImage(loggedInUser.avatarContainer);
         } else {
-            profileInitial.textContent = loggedInUser.username.charAt(0).toUpperCase();
-            profileInitial.style.display = "block";
+            setInitialAvatar(loggedInUser.username);
         }
 
         profileNav.style.display = "block"; // Show profile dropdown
     }
 
     // Handle profile picture change
-    uploadPic.addEventListener("change", function (event) {
+    avatarInput.addEventListener("change", function (event) {
         const file = event.target.files[0];
         if (file) {
             const reader = new FileReader();
             reader.onload = function (e) {
                 const imageUrl = e.target.result;
-                profilePic.style.backgroundImage = `url(${imageUrl})`;
-                profileLogo.style.backgroundImage = `url(${imageUrl})`;
+                updateProfileImage(imageUrl);
 
                 // Update profile picture in localStorage
-                loggedInUser.profilePic = imageUrl;
+                loggedInUser.avatarContainer = imageUrl;
                 localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
             };
             reader.readAsDataURL(file);
         }
+    });
+
+    // Handle avatar removal
+    removeAvatarBtn.addEventListener("click", function () {
+        updateProfileImage(null);
+        loggedInUser.avatarContainer = null;
+        localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
     });
 
     // Handle logout
@@ -85,6 +91,30 @@ document.addEventListener("DOMContentLoaded", function () {
             profileDropdown.classList.remove("show");
         }
     });
+
+    // Update profile image across both profile sections
+    function updateProfileImage(imageUrl) {
+        if (imageUrl) {
+            userAvatar.src = imageUrl;
+            userAvatar.style.display = "block";
+            avatarPlaceholder.style.display = "none";
+            profileLogo.style.backgroundImage = `url(${imageUrl})`;
+            profileInitial.style.display = "none"; // Hide initial if profile picture exists
+        } else {
+            userAvatar.style.display = "none";
+            setInitialAvatar(loggedInUser.username);
+        }
+    }
+
+    // Set initial avatar with user's initial
+    function setInitialAvatar(username) {
+        const initials = username.charAt(0).toUpperCase();
+        avatarPlaceholder.textContent = initials;
+        avatarPlaceholder.style.display = "flex";
+        profileInitial.textContent = initials;
+        profileInitial.style.display = "block";
+        profileLogo.style.backgroundImage = "none";
+    }
 });
 
 

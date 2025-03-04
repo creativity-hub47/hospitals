@@ -1,6 +1,5 @@
 
 
-
 // ==== profile ==== //
 document.addEventListener("DOMContentLoaded", function () {
     const registerOption = document.getElementById("registerOption");
@@ -23,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
         profileNav.style.display = "block";
 
         // Display Username Initial or Profile Pic
-        if (loggedInUser.profilePic) {
-            profileLogo.style.backgroundImage = `url(${loggedInUser.profilePic})`;
+        if (loggedInUser.avatarContainer) {
+            profileLogo.style.backgroundImage = `url(${loggedInUser.avatarContainer})`;
             profileInitial.style.display = "none";
         } else {
             profileInitial.textContent = loggedInUser.username.charAt(0).toUpperCase();
@@ -53,8 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-
 
 
 

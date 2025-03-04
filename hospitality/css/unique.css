@@ -7,17 +7,25 @@
 	top: 0;
 	padding-top: 0%;
 	opacity: .8;
-  }
+}
   
-  .parallax-inner {
+.parallax-inner {
 	padding: 10% 20%;
 	z-index: 9;
 	color: rgb(0, 0, 0);
 	font-weight: bolder;
 	font-style: italic;
 	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
+}
 
+
+.section {
+  padding: 60px 0;
+}
+.card-hover:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
 
 
   /*= About unique =*/
